@@ -12,9 +12,11 @@ const env = require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
 const utilities = require("./utilities/")
+const inventoryRoute =require("./routes/inventoryRoute")
 
 // Index route
 app.get("/", utilities.handleErrors(baseController.buildHome))
+
 
 /* ***********************
  * Routes
