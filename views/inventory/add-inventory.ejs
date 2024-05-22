@@ -1,0 +1,46 @@
+<h1> add-new vehicule </h1>
+<p> all field is required</p>
+<form>
+
+    <fieldset>
+
+        <label for="classification_name">classification:</label>
+        <select id="classification_name" name="classification_name">
+          <option value="Custom">Custom</option>
+          <option value="Sport">Sport</option>
+          <option value="Suv">Suv</option>
+          <option value="Truck">Truck</option>
+          <option value="Sedan">Sedan</option>
+        </select>
+
+        <label for="inv_make" > Make </label>
+        <input type="text"  name="inv_make"  id ="inv_make" size ="10" required>
+
+        
+        <label for="inv_model" > Model </label>
+        <input type="text"  name="inv_model"  id ="inv_model" size ="10" required>
+
+        <textarea  type = "text" name="inv_description" style="width:200px; height:600px;">
+          
+            </textarea>
+            <label for="inv_image" > image </label>
+            <input type="file"  name="inv_image"  id ="inv_image" size ="10" required>
+          
+            
+            <label for="inv_thumnails" > inv_thumnails</label>
+            <input type="file"  name="inv_thumbnail"  id ="inv_thumbnail" size ="10" required>
+            
+            <label for="inv_price" > price </label>
+            <input type="number"  name="inv_price"  id ="inv_price" size ="10" required>
+           
+
+            <label for="inv_miles" > Miles </label>
+            <input type="number"  name="inv_miles"  id ="inv_miles" size ="10" required>
+            
+            <label for="inv_color" > inv_color </label>
+            <input type="color"  name="inv_color"  id ="inv_color" size ="10" required>
+            
+          
+    </fieldset>
+</form>
+
