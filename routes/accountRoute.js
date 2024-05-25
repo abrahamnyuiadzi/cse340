@@ -13,8 +13,16 @@ router.get("/login",utilities.handleErrors(accountController.
     router.get("/register",utilities.handleErrors(accountController.
         buildRegister))
 
-        router.post(
-            '/register',
-            regValidate.registationRules(),
-           regValidate.checkRegData, 
-   utilities.handleErrors(accountController.registerAccount))
+        //unit 5 new default login //
+        router.get("/", utilities.checkLogin, utilities.handleErrors(accountController.
+            buildManagement))
+
+     // Process the login request
+router.post(
+    "/login",
+    regValidate.loginRules(),
+    regValidate.checkLoginData,
+    utilities.handleErrors(accountController.accountLogin)
+  )
+
+  

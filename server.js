@@ -16,6 +16,7 @@ const inventoryRoute =require("./routes/inventoryRoute")
 const session = require("express-session")
 const pool = require('./database/')
 const bodyParser = require("body-parser")
+const cookieParser = require("cookie-parser")
 
 // Index route
 app.get("/", utilities.handleErrors(baseController.buildHome))
@@ -66,8 +67,8 @@ app.use(function(req, res, next){
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
-
-
+app.use(cookieParser())
+app.use(utilities.checkJWTToken)
 
 
 /* ***********************

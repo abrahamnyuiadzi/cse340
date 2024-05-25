@@ -1,0 +1,9 @@
+<h1> Login </h1>
+<% if (errors) { %>
+  <ul class="notice">
+ <% errors.array().forEach(error => { %>
+   <li><%= error.msg %></li>
+<%  }) %>
+ </ul>
+<% } %>
+<h1> you're login in </h1>
