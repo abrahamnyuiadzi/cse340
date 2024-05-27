@@ -17,6 +17,7 @@ const session = require("express-session")
 const pool = require('./database/')
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
+const accountRoute = require("./routes/accountRoute")
 
 // Index route
 app.get("/", utilities.handleErrors(baseController.buildHome))
@@ -32,8 +33,8 @@ app.use(async (req, res, next) => {
 // Inventory routes
 app.use("/inv", inventoryRoute)
 // acount routers unit 4
+app.use("/account", accountRoute) 
 
-app.use("/account",require("./routes/accountRoute"))
 /* ***********************
  * View Engine and Templates
  *************************/

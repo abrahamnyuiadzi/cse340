@@ -20,9 +20,11 @@ router.get("/login",utilities.handleErrors(accountController.
      // Process the login request
 router.post(
     "/login",
-    regValidate.loginRules(),
+    regValidate.cleckLogin(),
     regValidate.checkLoginData,
     utilities.handleErrors(accountController.accountLogin)
   )
+
+  module.exports = router
 
   

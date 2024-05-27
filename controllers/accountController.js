@@ -14,7 +14,7 @@ async function buildLogin(req, res, next) {
     })
   }
   
-  module.exports = { buildLogin }
+ 
 
 
   /* ****************************************
@@ -39,7 +39,7 @@ async function buildManagement(req, res, next) {
   })
 }
 
-modules.exports= {buildManagement}
+
 
 
 /* ****************************************
@@ -108,5 +108,4 @@ async function accountLogin(req, res) {
    return new Error('Access Forbidden')
   }
  }
-
-module.exports = { buildLogin, buildRegister }
+ module.exports = { buildLogin, buildRegister, buildManagement, buildLogin}
