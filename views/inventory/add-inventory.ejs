@@ -1,6 +1,6 @@
-<h1> add-new vehicule </h1>
+<h1> Modify </h1>
 <p> all field is required</p>
-<form>
+<form action="/inv/update" method="post"></form>
 
     <fieldset>
 
@@ -40,7 +40,11 @@
             <label for="inv_color" > inv_color </label>
             <input type="color"  name="inv_color"  id ="inv_color" size ="10" required>
             
-          
+            <button type="submit">Update Vehicle</button>
+            <input type="hidden" name="inv_id"
+       <% if(locals.inv_id) { %> value="<%= locals.inv_id %>"
+          <% } %>>
+         
     </fieldset>
 </form>
 

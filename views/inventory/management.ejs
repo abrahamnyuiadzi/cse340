@@ -9,3 +9,24 @@
 
   <a href ="add-classification.ejs">add new classification  </a>
   <a href ="classification.ejs">add new vehicule </a>
+
+  <h2>Manage Inventory</h2>
+  <p> choose a classification to see those inventory items</p>
+  <%- classificationSelect-%>
+
+  <select>
+    <label for="classification_name">classification:</label>
+            <select id="classification_name" name="classification_name">
+              <option value="Custom">Custom</option>
+              <option value="Sport">Sport</option>
+              <option value="Suv">Suv</option>
+              <option value="Truck">Truck</option>
+              <option value="Sedan">Sedan</option>
+    
+             
+            </select>
+
+  <table id="inventoryDisplay"></table>
+  <noscript>JavaScript must be enabled to use this page.</noscript>
+
+  <script src="../../js/inventory.js"></script>

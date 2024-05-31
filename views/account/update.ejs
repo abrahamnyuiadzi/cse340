@@ -1,0 +1,34 @@
+<h1> update </h1>
+<% if (errors) { %>
+  <ul class="notice">
+ <% errors.array().forEach(error => { %>
+   <li><%= error.msg %></li>
+<%  }) %>
+ </ul>
+<% } %>
+
+
+
+<label for="firstname" >First Name</label>
+<input type="text"  name="account_firstname"  id ="account_firstname " size ="10" required>
+<label for="firstname" >Last Name</label>
+<input type="text"  name="account_lastname"  id ="account_lastname " size ="10" required>
+
+
+
+            <label for="email" class="req">Email Address</label>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" required placeholder="Please use your school email address">
+          
+             <label for="accountPassword">  Password:</label> 
+        <input type="password" name="account_password" id="accountPassword" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
+        <span>Passwords must be at least 12 characters and contain at
+          least 1 number, 1 capital letter and 1 special character</span> 
+
+          
+          <label for="accountPassword"> new Password:</label> 
+          <input type="password" name="account_password" id="accountPassword" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
+          <span>Passwords must be at least 12 characters and contain at
+            least 1 number, 1 capital letter and 1 special character</span> 
+          
+
+          <button id="btnSubmit" type="submit">update </button>
