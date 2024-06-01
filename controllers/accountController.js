@@ -39,6 +39,17 @@ async function buildManagement(req, res, next) {
   })
 }
 
+// deliver update view// 
+
+
+async function buildupdate(req, res, next) {
+  let nav = await utilities.getNav()
+  res.render("account/update", {
+    title: "update",
+    nav,
+  })
+}
+
 
 
 

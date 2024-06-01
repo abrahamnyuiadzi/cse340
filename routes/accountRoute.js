@@ -16,7 +16,12 @@ router.get("/login",utilities.handleErrors(accountController.
         //unit 5 new default login //
         router.get("/", utilities.checkLogin, utilities.handleErrors(accountController.
             buildManagement))
+// unit 5 update 
 
+router.get("/update",utilities.handleErrors(accountController.
+    buildupdate))
+
+         
      // Process the login request
 // Process the registration data
 router.post(
